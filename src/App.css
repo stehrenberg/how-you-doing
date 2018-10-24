@@ -1,31 +1,70 @@
 .App {
     text-align: center;
-    background-color: #aaccee;
+    background-color: #26cbb5;
     font-size: calc(10px + 2vmin);
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Noteworthy', 'Helvetica', sans-serif;
     font-weight: bold;
     color: cornsilk;
-    height: 100%;
-}
-
-.App-logo {
-    animation: App-logo-spin infinite 20s linear;
-    height: 40vmin;
+    height: 100vh;
 }
 
 .App-header {
-    background-color: #aaccee;
-    min-height: 20vh;
+    background-color: #26cbb5;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 10vmin 5vmin 20vmin;
+}
+
+.App-logo {
+    /*animation: App-logo-spin infinite 20s linear;*/
+    height: 30vmin;
+    transform: rotate(10deg);
+    box-shadow: 0 0 5px 3px #556575;
+    border-radius: 50%;
+}
+
+.App-content {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
+    justify-content: space-between;
+    height: available;
 }
 
 .App-link {
     color: #61dafb;
+}
+
+.Title-Typography {
+    font-family: 'Noteworthy', serif !important;
+    font-size: calc(18px + 2vmax) !important;
+    color: #26cbb5 !important;
+    background-color: #fefffe;
+    border: 2px dashed #636259;
+    width: calc(30px + 50vmin);
+    margin: 2vmin;
+    padding: 5vmin;
+    border-radius: 5px;
+}
+
+.StatusDisplay {
+    background-color: #fefffe;
+    height: calc(10px + 5vh);
+}
+
+.EmojiSelect {
+    color: #26cbb5;
+    align-self: flex-end;
+}
+
+.EmojiTooltip {
+    size: 32px !important;
+}
+
+.EmojiIcon {
+    font-size: xx-large !important;
 }
 
 @keyframes App-logo-spin {

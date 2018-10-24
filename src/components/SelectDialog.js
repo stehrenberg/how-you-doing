@@ -3,7 +3,8 @@ import PropTypes from 'prop-types';
 import {withStyles} from '@material-ui/core/styles';
 import Popover from "@material-ui/core/Popover/Popover";
 import { Picker } from 'emoji-mart';
-import * as emojione from "emojione";
+import Moment from 'moment-js';
+import {connect} from "react-redux";
 
 class SelectDialog extends React.Component {
     constructor(props) {
@@ -16,9 +17,13 @@ class SelectDialog extends React.Component {
     handleClose = () => this.props.onClose([...this.state.selectedEmojis]);
 
     selectEmoji = (emoji, event) => {
+        const {category} = this.props;
+        const newEmoji = {time: Moment(), category, ...emoji};
+        console.log(newEmoji);
+
         this.setState(
             {
-                selectedEmojis: [...this.state.selectedEmojis, emoji]
+                selectedEmojis: [...this.state.selectedEmojis, newEmoji]
             });
     };
 
@@ -41,8 +46,7 @@ class SelectDialog extends React.Component {
                         horizontal: 'center',
                     }}
                 >
-                    <Picker set="emojione" title="How do you feel?"
-                            onSelect={this.selectEmoji }
+                    <Picker onSelect={this.selectEmoji }
                             emojiTooltip={ true }
                     />
                 </Popover>
@@ -61,8 +65,13 @@ SelectDialog.propTypes = {
     classes: PropTypes.object.isRequired,
     show: PropTypes.bool.isRequired,
     anchorEl: PropTypes.object,
-    handleClose: PropTypes.func.isRequired,
 };
 
-export default withStyles(styles)(SelectDialog);
+const mapStateToProps = (state) => (
+    {
+        category: state.category,
+    }
+);
+
+export default withStyles(styles)(connect(mapStateToProps)(SelectDialog));
 
