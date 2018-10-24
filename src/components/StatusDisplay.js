@@ -25,7 +25,6 @@ class StatusDisplay extends React.Component {
         return (
             <React.Fragment>
                 <Paperbox className={classes.paperbox}>
-                    <StatusCategoryBar className="StatusCategoryBar"/>
                     {
                         emojis.map((emoji) => (
                             <Tooltip classes={{tooltip: classes.lightTooltip}}
@@ -60,10 +59,8 @@ const styles = theme => ({
         flexWrap: 'wrap',
         alignItems: 'flex-start',
         justifyContent: 'flex-start',
-        width: '85vw',
-        height: '40vmin',
-        marginBottom: '10vmin',
-        padding: '0 20vw',
+        width: '60vw',
+        height: '50vmin',
     }
 });
 

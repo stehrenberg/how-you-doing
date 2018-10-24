@@ -5,7 +5,7 @@ import RestoreIcon from '@material-ui/icons/Restore';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import HealingIcon from '@material-ui/icons/Healing';
 import ActivityIcon from '@material-ui/icons/DirectionsBike';
-import PillsIcon from '../pills-icon.jpg'
+import PillsIcon from '../assets/img/pills-icon.jpg'
 import CakeIcon from '@material-ui/icons/Cake';
 import withStyles from "@material-ui/core/styles/withStyles";
 import { connect } from 'react-redux';
@@ -40,7 +40,7 @@ const styles = theme => ({
         flexWrap: 'wrap',
         alignItems: 'center',
         justifyContent: 'space-between',
-        width: '100vw',
+        width: '100%',
         padding: '0px 10px',
         margin: '5px 2px',
     },

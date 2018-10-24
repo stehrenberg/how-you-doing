@@ -6,7 +6,7 @@ import * as serviceWorker from './serviceWorker';
 
 import App from './App';
 import reducers from './reducers';
-import './index.css';
+import './assets/styles/index.css';
 
 const store = createStore(reducers);
 const app = (

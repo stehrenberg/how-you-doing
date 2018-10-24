@@ -39,7 +39,10 @@ class EmojiSelect extends React.Component {
 
         return (
             <React.Fragment>
-                <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                <div style={{
+                    display: 'flex',
+                    flexDirection: 'column',
+                    alignItems: 'center' }}>
                 <Button variant="fab"
                         color="inherit"
                         aria-label="Add"
@@ -62,8 +65,8 @@ class EmojiSelect extends React.Component {
                         vertical: 'bottom',
                         horizontal: 'center',
                     }}/>
-                <StatusDisplay className="StatusDisplay" emojis={ [...this.state.emojis] }/>
                 </div>
+                <StatusDisplay className={classes.statusDisplay} emojis={ [...this.state.emojis] }/>
             </React.Fragment>
         );
     }
@@ -85,7 +88,14 @@ const styles = theme => {
             height: 'auto',
             width: 'auto',
             margin: theme.spacing.unit,
-        }
+        },
+        statusDisplay: {
+            width: '100%',
+            backgroundColor: '#fefffe',
+            height: 'calc(10px + 5vh)',
+            position: 'relative',
+            bottom: 0,
+        },
     });
 };
 

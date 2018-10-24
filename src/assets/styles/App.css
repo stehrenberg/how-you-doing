@@ -6,6 +6,7 @@
     font-weight: bold;
     color: cornsilk;
     height: 100vh;
+    width: 100vw;
 }
 
 .App-header {
@@ -31,6 +32,7 @@
     align-items: center;
     justify-content: space-between;
     height: available;
+    background-color: #26cbb5;
 }
 
 .App-link {
@@ -47,11 +49,6 @@
     margin: 2vmin;
     padding: 5vmin;
     border-radius: 5px;
-}
-
-.StatusDisplay {
-    background-color: #fefffe;
-    height: calc(10px + 5vh);
 }
 
 .EmojiSelect {

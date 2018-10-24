@@ -1,0 +1,19 @@
+{
+ "data" : [
+   {
+     "date" : "2018-10-22-13-14-00",
+     "category" : "mood",
+     "emoji": ":+1:"
+   },
+   {
+     "date" : "2018-10-22-13-10-05:",
+     "category" : "meds",
+     "emoji": ":pill:"
+   },
+   {
+     "date" : "2018-10-22-13-14-37",
+     "category" : "mood",
+     "emoji": ":pill:"
+   }
+ ]
+}
